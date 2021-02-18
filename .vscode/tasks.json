@@ -4,17 +4,41 @@
     "version": "2.0.0",
     "tasks": [
       {
-          "label": "build",
-          "command": "./build.sh",
-          "type": "shell",
-          "windows": {
-            "command": "./Build.cmd",
-          },
-          "problemMatcher": "$msCompile",
-          "group": {
-            "kind": "build",
-            "isDefault": true
-          },
-      }
+        "label": "build",
+        "command": "dotnet",
+        "type": "process",
+        "args": [
+            "build",
+            "${workspaceFolder}/src/csc-args-diff/csc-args-diff.csproj",
+            "/property:GenerateFullPaths=true",
+            "/consoleloggerparameters:NoSummary"
+        ],
+        "problemMatcher": "$msCompile"
+    },
+    {
+        "label": "publish",
+        "command": "dotnet",
+        "type": "process",
+        "args": [
+            "publish",
+            "${workspaceFolder}/src/csc-args-diff/csc-args-diff.csproj",
+            "/property:GenerateFullPaths=true",
+            "/consoleloggerparameters:NoSummary"
+        ],
+        "problemMatcher": "$msCompile"
+    },
+    {
+        "label": "watch",
+        "command": "dotnet",
+        "type": "process",
+        "args": [
+            "watch",
+            "run",
+            "${workspaceFolder}/src/csc-args-diff/csc-args-diff.csproj",
+            "/property:GenerateFullPaths=true",
+            "/consoleloggerparameters:NoSummary"
+        ],
+        "problemMatcher": "$msCompile"
+    }
     ]
   }

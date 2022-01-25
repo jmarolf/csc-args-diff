@@ -1,7 +1,8 @@
 
 <Project>
   <ItemGroup>
-    <PackageVersion Include="MSBuild.StructuredLogger" Version="2.1.303" />
-    <PackageVersion Include="DiffPlex" Version="1.6.3" />
+    <PackageVersion Include="DotNet.ReproducibleBuilds" Version="1.1.1" />
+    <PackageVersion Include="MSBuild.StructuredLogger" Version="2.1.545" />
+    <PackageVersion Include="DiffPlex" Version="1.7.0" />
   </ItemGroup>
 </Project>
